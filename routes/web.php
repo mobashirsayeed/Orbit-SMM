@@ -14,6 +14,12 @@ use App\Http\Controllers\Billing\SubscriptionController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
+php// TEMPORARY — DELETE AFTER USE
+Route::get('/setup-db-xyz123', function () {
+    Artisan::call('migrate', ['--force' => true]);
+    return '<pre>' . Artisan::output() . '</pre>';
+});
+
 Route::middleware('guest')->group(function () {
     Route::get('/', fn() => redirect()->route('login'));
     Route::get('/login', [LoginController::class, 'create'])->name('login');
