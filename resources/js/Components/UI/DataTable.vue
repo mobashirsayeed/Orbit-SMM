@@ -92,7 +92,7 @@
 import { ref, computed } from 'vue';
 
 const props = defineProps({
-   {
+  data: {
     type: Array,
     required: true,
   },
