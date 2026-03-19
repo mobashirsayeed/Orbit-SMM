@@ -209,11 +209,11 @@ const followerChartData = computed(() => ({
   labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
   datasets: [
     {
-      label: 'Followers',
-       [1000, 1200, 1500, 1800],
-      borderColor: '#6c63ff',
-      tension: 0.4,
-    },
+  label: 'Followers',
+  data: [1000, 1200, 1500, 1800],
+  borderColor: '#6c63ff',
+  tension: 0.4,
+},
   ],
 }));
 
