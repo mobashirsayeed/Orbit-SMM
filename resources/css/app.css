@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@layer base {
+    :root {
+        --color-bg: 255 255 255;
+        --color-surface: 249 250 251;
+    }
+
+    .dark {
+        --color-bg: 17 24 39;
+        --color-surface: 31 41 55;
+    }
+
+    html {
+        @apply antialiased;
+    }
+
+    body {
+        @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100;
+        font-family: 'Inter', system-ui, sans-serif;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply inline-flex items-center px-4 py-2 bg-orbit-600 border border-transparent rounded-lg font-semibold text-sm text-white tracking-wide hover:bg-orbit-700 focus:outline-none focus:ring-2 focus:ring-orbit-500 focus:ring-offset-2 transition duration-150 disabled:opacity-50 disabled:cursor-not-allowed;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg font-semibold text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-orbit-500 focus:ring-offset-2 transition duration-150;
+    }
+
+    .input {
+        @apply block w-full rounded-lg border-gray-300 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 shadow-sm focus:border-orbit-500 focus:ring-orbit-500 sm:text-sm;
+    }
+
+    .card {
+        @apply bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
