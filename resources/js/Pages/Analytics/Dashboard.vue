@@ -222,7 +222,7 @@ const engagementChartData = computed(() => ({
   datasets: [
     {
       label: 'Engagement Rate',
-       [2.5, 3.1, 2.8, 3.5],
+      data: [2.5, 3.1, 2.8, 3.5],
       borderColor: '#10b981',
       tension: 0.4,
     },
